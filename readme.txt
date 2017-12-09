@@ -1,7 +1,7 @@
 # EDD Software Licensing Translations Updater
 
 Contributors: afragen
-Tags: edd-software-licensing, plugin, theme, language pack, updater
+Tags: edd-software-licensing, language pack, updater
 Requires at least: 4.6
 Requires PHP: 5.6
 Tested up to: 4.9
@@ -12,7 +12,12 @@ License URI: http://www.opensource.org/licenses/MIT
 
 ## Description
 
-This plugin is an EDD Software Licensing extension that will allow for decoupled language pack updates for your plugins utilizing EDD Software Licensing that are hosted on public repositories in GitHub, Bitbucket, or GitLab.
+This plugin is an EDD Software Licensing extension that will allow for decoupled language pack updates for your plugins or themes utilizing EDD Software Licensing that are hosted on public repositories in GitHub, Bitbucket, or GitLab.
+
+You will need to update to the latest versions of the updaters in the EDD Software Licensing sample code to ensure the appropriate action hooks are present.
+
+You will need to add a key/value element to your setup array similar to the following,
+`'languages' => 'https://github.com/<USER>/my-language-pack'`
 
 ### Plugins
 
