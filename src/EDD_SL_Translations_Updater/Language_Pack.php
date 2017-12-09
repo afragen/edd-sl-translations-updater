@@ -57,7 +57,7 @@ class Language_Pack {
 		$this->repo_api->get_language_pack( $header );
 
 		add_filter( 'pre_set_site_transient_update_plugins', array( &$this, 'pre_set_site_transient' ) );
-		//add_filter( 'pre_set_site_transient_update_themes', array( &$this, 'pre_set_site_transient' ) );
+		add_filter( 'pre_set_site_transient_update_themes', array( &$this, 'pre_set_site_transient' ) );
 	}
 
 	/**
