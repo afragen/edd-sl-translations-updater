@@ -45,6 +45,7 @@ trait Base {
 	 */
 	public function get_remote_repo_data( $repo ) {
 		$slug = array_keys( $repo )[0];
+		$slug = $this->get_repo_slug( $repo );
 		$type = $repo['type'];
 		unset( $repo['type'] );
 		$repo       = (object) array_pop( $repo );
@@ -60,6 +61,27 @@ trait Base {
 		$language_pack->run();
 
 		return true;
+	}
+
+	/**
+	 * Get slug from $repo.
+	 * Sometimes there may be more than one repository used with EDD Software Licensing.
+	 *
+	 * @param array $repo EDD SL config data.
+	 *
+	 * @return string $slug
+	 */
+	private function get_repo_slug( $repo ) {
+		$repos = $this->config;
+		$keys  = array_keys( $repo );
+		array_pop( $keys ); // remove type.
+		$slug = array_filter( $keys, function( $e ) use ( $repos ) {
+			if ( ! isset( $repos[ $e ] ) ) {
+				return $e;
+			}
+		} );
+
+		return array_pop( $slug );
 	}
 
 	/**
