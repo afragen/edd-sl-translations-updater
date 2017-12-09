@@ -44,10 +44,6 @@ if ( version_compare( '5.6.0', PHP_VERSION, '>=' ) ) {
 	return false;
 }
 
-if ( ! class_exists( 'EDD_SL_Plugin_Updater' ) ) {
-	return;
-}
-
 // Load textdomain.
 load_plugin_textdomain( 'edd-sl-translations-updater' );
 
