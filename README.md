@@ -21,11 +21,11 @@ You must add and additional element to the array in your `EDD_SL_Plugin_Updater`
 
 ```php
 	$edd_updater = new EDD_SL_Plugin_Updater( EDD_SAMPLE_STORE_URL, __FILE__, array(
-			'version' 	=> '1.0',                // current version number
-			'license' 	=> $license_key,         // license key (used get_option above to retrieve from DB)
+			'version'   => '1.0',                // current version number
+			'license'   => $license_key,         // license key (used get_option above to retrieve from DB)
 			'item_name' => EDD_SAMPLE_ITEM_NAME, // name of this plugin
-			'author' 	=> 'Pippin Williamson',  // author of this plugin
-			'beta'		=> false,
+			'author'    => 'Pippin Williamson',  // author of this plugin
+			'beta'      => false,
 			'languages' => 'https://github.com/<USER>/my-language-pack',
 		)
 ```
