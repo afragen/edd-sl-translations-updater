@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: EDD SL Translations Updater\n"
-"POT-Creation-Date: 2017-12-08 22:04-0800\n"
+"POT-Creation-Date: 2017-12-09 09:06-0800\n"
 "PO-Revision-Date: 2017-12-08 22:03-0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -29,7 +29,7 @@ msgid ""
 msgstr ""
 
 #. Plugin Name of the plugin/theme
-msgid "EDD SL Translations Updater"
+msgid "EDD Software Licensing Translations Updater"
 msgstr ""
 
 #. Plugin URI of the plugin/theme
