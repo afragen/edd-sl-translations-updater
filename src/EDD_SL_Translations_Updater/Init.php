@@ -26,9 +26,11 @@ class Init {
 	use Base;
 
 	/**
-	 * Let's get going.
+	 * Let's get going. Load relevant action/filter hooks.
 	 */
 	public function run() {
+		add_action( 'post_edd_sl_plugin_updater_setup', array( &$this, 'get_edd_plugin_data' ), 15, 1 );
+		add_action( 'post_edd_sl_theme_updater_setup', array( &$this, 'get_edd_theme_data' ), 15, 1 );
 	}
 
 	/**
