@@ -36,16 +36,6 @@ trait Base {
 	protected $config;
 
 	/**
-	 * @var array $edd_plugin_data EDD plugin data.
-	 */
-	protected $edd_plugin_data;
-
-	/**
-	 * @var bool $can_update User has permissions to update.
-	 */
-	protected $can_update = false;
-
-	/**
 	 * Get remote repo meta data for language-pack.json file.
 	 * Initiates remote APIs for data.
 	 *

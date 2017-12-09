@@ -18,16 +18,6 @@ class Init {
 	 * Let's get going.
 	 */
 	public function run() {
-		$this->load_hooks();
-	}
-
-	/**
-	 * Load relevant action/filter hooks.
-	 * Use 'init' hook for user capabilities.
-	 */
-	protected function load_hooks() {
-		add_action( 'post_edd_sl_plugin_updater_setup', array( &$this, 'get_edd_plugin_data' ), 10, 1 );
-		add_action( 'init', array( &$this, 'init' ), 10 );
 	}
 
 	/**
