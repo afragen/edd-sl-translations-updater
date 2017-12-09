@@ -39,12 +39,17 @@ trait Base {
 	 * Get remote repo meta data for language-pack.json file.
 	 * Initiates remote APIs for data.
 	 *
-	 * @param $repo
+	 * @param array $repo EDD SL plugin/theme data.
 	 *
 	 * @return bool
 	 */
 	public function get_remote_repo_data( $repo ) {
-		$slug = array_keys( $repo )[0];
+		if ( 'theme' === $repo['type'] ) {
+			$new_repo[ $repo['theme_slug'] ] = $repo;
+			$new_repo['type']                = $repo['type'];
+			$repo                            = $new_repo;
+		}
+
 		$slug = $this->get_repo_slug( $repo );
 		$type = $repo['type'];
 		unset( $repo['type'] );
