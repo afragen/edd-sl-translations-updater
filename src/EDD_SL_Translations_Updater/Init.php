@@ -21,11 +21,11 @@ class Init {
 	}
 
 	/**
-	 * Test and set for proper user capabilities.
+	 * Test for proper user capabilities.
 	 *
 	 * @return bool
 	 */
-	public function init() {
+	public function can_update() {
 		global $pagenow;
 
 		$load_multisite   = ( is_network_admin() && current_user_can( 'manage_network' ) );
@@ -39,11 +39,7 @@ class Init {
 			'update.php',
 		);
 
-		if ( $user_can_update && in_array( $pagenow, array_unique( $admin_pages ), true ) ) {
-			$this->can_update = true;
-		}
-
-		return true;
+		return $user_can_update && in_array( $pagenow, array_unique( $admin_pages ), true );
 	}
 
 	public function get_edd_plugin_data( $edd_plugin_data ) {
