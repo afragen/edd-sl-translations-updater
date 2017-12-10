@@ -5,6 +5,7 @@ need to finalize for [PR #1225](https://github.com/easydigitaldownloads/EDD-Soft
 * added support for multiple plugins using EDD Software Licensing
 * added support for themes using EDD Software Licensing
 * overhaul and cleanup of code
+* re-write of readme
 
 #### 0.1
 * initial commit

@@ -16,12 +16,12 @@ This plugin is an EDD Software Licensing extension that will allow for decoupled
 
 You will need to update to the latest versions of the updaters in the EDD Software Licensing sample code to ensure the appropriate action hooks are present.
 
-You will need to add a key/value element to your setup array similar to the following,
+You will need to add a key/value pair to your setup array similar to the following,
 `'languages' => 'https://github.com/<USER>/my-language-pack'`
 
 ### Plugins
 
-You must add and additional element to the array in your `EDD_SL_Plugin_Updater` setup. The array will be similar to the following from the `edd-sample-plugin.php`.
+You must add and additional key/value pair to the setup array in your `EDD_SL_Plugin_Updater` setup. The array will be similar to the following from the `edd-sample-plugin.php`.
 
 
 `
@@ -37,7 +37,7 @@ You must add and additional element to the array in your `EDD_SL_Plugin_Updater`
 
 ### Themes
 
-You must add an additional element to the array in your `EDD_Theme_Updater_Admin` setup. The array will be similar to the following from the `edd-sample-theme/updater/theme-updater.php` file.
+You must add an additional key/value pair to the setup array in your `EDD_Theme_Updater_Admin` setup. The array will be similar to the following from the `edd-sample-theme/updater/theme-updater.php` file.
 
 `
 $updater = new EDD_Theme_Updater_Admin(
