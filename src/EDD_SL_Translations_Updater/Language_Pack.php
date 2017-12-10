@@ -35,7 +35,7 @@ class Language_Pack {
 	/**
 	 * Language_Pack constructor.
 	 *
-	 * @param \stdClass                                          $repo EDD SL repo object.
+	 * @param \stdClass                                             $repo EDD SL repo object.
 	 * @param \Fragen\EDD_SL_Translations_Updater\Language_Pack_API $api  Language_Pack_API object.
 	 */
 	public function __construct( $repo, Language_Pack_API $api ) {
