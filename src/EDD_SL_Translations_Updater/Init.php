@@ -38,7 +38,7 @@ class Init {
 	 *
 	 * @return bool
 	 */
-	public function can_update() {
+	private function can_update() {
 		global $pagenow;
 
 		$load_multisite   = ( is_network_admin() && current_user_can( 'manage_network' ) );
