@@ -108,7 +108,7 @@ trait Base {
 		$header['base_uri']   = str_replace( $header_parts['path'], '', $repo_header );
 		$header['uri']        = isset( $header['scheme'] ) ? trim( $repo_header, '/' ) : null;
 
-		$header = self::sanitize( $header );
+		$header = $this->sanitize( $header );
 
 		return $header;
 	}
@@ -120,7 +120,7 @@ trait Base {
 	 *
 	 * @return array
 	 */
-	public static function sanitize( $input ) {
+	public function sanitize( $input ) {
 		$new_input = array();
 		foreach ( array_keys( (array) $input ) as $id ) {
 			$new_input[ sanitize_file_name( $id ) ] = sanitize_text_field( $input[ $id ] );
