@@ -4,7 +4,7 @@
 * Contributors: [Andy Fragen](https://github.com/afragen)
 * Tags: edd software licensing, language pack, updater
 * Requires at least: 4.6
-* Requires PHP: 5.6
+* Requires PHP: 5.4
 * Tested up to: 4.9
 * Stable tag: master
 * Donate link: http://thefragens.com/translations-updater-donate
