@@ -1,0 +1,32 @@
+{
+  "name": "afragen/edd-sl-translations-updater",
+  "type": "wordpress-plugin",
+  "keywords": [
+    "edd-software-licensing",
+    "wordpress",
+    "plugin",
+    "theme",
+    "updater",
+    "language pack",
+    "translations"
+  ],
+  "license": "MIT",
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/afragen/edd-sl-translations-updater"
+    }
+  ],
+  "authors": [
+    {
+      "name": "Andy Fragen",
+      "email": "andy@thefragens.com",
+      "homepage": "https://thefragens.com",
+      "role": "Developer"
+    }
+  ],
+  "prefer-stable": true,
+  "require": {
+    "php": ">=5.6"
+  }
+}
