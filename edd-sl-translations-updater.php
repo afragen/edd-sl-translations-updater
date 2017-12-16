@@ -21,7 +21,7 @@
  * Network:           true
  * GitHub Plugin URI: https://github.com/afragen/edd-sl-translations-updater
  * Requires WP:       4.6
- * Requires PHP:      5.6
+ * Requires PHP:      5.4
  */
 
 /*
@@ -32,11 +32,11 @@ if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
-if ( version_compare( '5.6.0', PHP_VERSION, '>=' ) ) {
+if ( version_compare( '5.4.0', PHP_VERSION, '>=' ) ) {
 	?>
 	<div class="error notice is-dismissible">
 		<p>
-			<?php printf( esc_html__( 'EDD Software Licensing Translations Updater cannot run on PHP versions older than %s. Please contact your hosting provider to update your site.', 'edd-sl-translations-updater' ), '5.6.0' ); ?>
+			<?php printf( esc_html__( 'EDD Software Licensing Translations Updater cannot run on PHP versions older than %s. Please contact your hosting provider to update your site.', 'edd-sl-translations-updater' ), '5.4.0' ); ?>
 		</p>
 	</div>
 	<?php
