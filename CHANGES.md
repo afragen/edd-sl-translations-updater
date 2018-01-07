@@ -1,5 +1,8 @@
 #### [unreleased]
 
+#### 1.1.0 / 2018-01-07
+* No need to use `trait API` in `trait Base` and vica versa
+
 #### 1.0.0 / 2017-12-16
 * need to finalize for [PR #1225](https://github.com/easydigitaldownloads/EDD-Software-Licensing/pull/1225), then need to tag and release
 
