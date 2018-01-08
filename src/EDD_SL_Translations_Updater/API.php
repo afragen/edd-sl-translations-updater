@@ -23,7 +23,6 @@ if ( ! defined( 'WPINC' ) ) {
  * @package Fragen\EDD_SL_Translations_Updater
  */
 trait API {
-	use Base;
 
 	/**
 	 * Variable for setting update transient hours.
