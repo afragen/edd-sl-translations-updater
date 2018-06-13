@@ -79,11 +79,13 @@ trait Base {
 		$repos = $this->config;
 		$keys  = array_keys( $repo );
 		array_pop( $keys ); // remove type.
-		$slug = array_filter( $keys, function( $e ) use ( $repos ) {
-			if ( ! isset( $repos[ $e ] ) ) {
-				return $e;
+		$slug = array_filter(
+			$keys, function( $e ) use ( $repos ) {
+				if ( ! isset( $repos[ $e ] ) ) {
+					return $e;
+				}
 			}
-		} );
+		);
 
 		return array_pop( $slug );
 	}

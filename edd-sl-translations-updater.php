@@ -12,7 +12,7 @@
  * Plugin Name:       EDD Software Licensing Translations Updater
  * Plugin URI:        https://github.com/afragen/edd-sl-translations-updater
  * Description:       An EDD Software Licensing extension to automatically update language packs.
- * Version:           1.1.0
+ * Version:           1.1.0.1
  * Author:            Andy Fragen
  * License:           MIT
  * License URI:       http://www.opensource.org/licenses/MIT
@@ -36,7 +36,10 @@ if ( version_compare( '5.4.0', PHP_VERSION, '>=' ) ) {
 	?>
 	<div class="error notice is-dismissible">
 		<p>
-			<?php printf( esc_html__( 'EDD Software Licensing Translations Updater cannot run on PHP versions older than %s. Please contact your hosting provider to update your site.', 'edd-sl-translations-updater' ), '5.4.0' ); ?>
+			<?php
+			/* translators: %s: version number */
+			printf( esc_html__( 'EDD Software Licensing Translations Updater cannot run on PHP versions older than %s. Please contact your hosting provider to update your site.', 'edd-sl-translations-updater' ), '5.4.0' );
+			?>
 		</p>
 	</div>
 	<?php

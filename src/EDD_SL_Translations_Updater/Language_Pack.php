@@ -83,9 +83,11 @@ class Language_Pack {
 			$translations = wp_get_installed_translations( 'themes' );
 		}
 
-		$repos = array_filter( $this->config, function( $e ) {
-			return isset( $e->language_packs );
-		} );
+		$repos = array_filter(
+			$this->config, function( $e ) {
+				return isset( $e->language_packs );
+			}
+		);
 
 		foreach ( $repos as $repo ) {
 			foreach ( $locales as $locale ) {

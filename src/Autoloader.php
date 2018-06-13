@@ -95,9 +95,11 @@ if ( ! class_exists( 'Fragen\\Autoloader' ) ) {
 				$path = substr( $class, strlen( $namespace ) + 1 );
 				$path = str_replace( '\\', DIRECTORY_SEPARATOR, $path );
 
-				$paths = array_map( function( $dir ) use ( $path ) {
-					return $dir . DIRECTORY_SEPARATOR . $path . '.php';
-				}, $dirs );
+				$paths = array_map(
+					function( $dir ) use ( $path ) {
+							return $dir . DIRECTORY_SEPARATOR . $path . '.php';
+					}, $dirs
+				);
 
 				// Test for its existence and load if present.
 				foreach ( $paths as $path ) {
