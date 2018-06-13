@@ -1,5 +1,6 @@
 #### [unreleased]
 * update `class Autoload`
+* update for GitLab API v4
 
 #### 1.1.0 / 2018-01-07
 * No need to use `trait API` in `trait Base` and vica versa

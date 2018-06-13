@@ -61,7 +61,7 @@ trait API {
 				break;
 			case 'gitlab':
 				$arr['repo']          = 'gitlab';
-				$arr['base_uri']      = 'https://gitlab.com/api/v3';
+				$arr['base_uri']      = 'https://gitlab.com/api/v4';
 				$arr['base_download'] = 'https://gitlab.com';
 				break;
 		}
