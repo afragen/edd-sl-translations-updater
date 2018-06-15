@@ -1,14 +1,14 @@
 <?php
 /**
- * EDD Software Licensing Translations Updater
+ * EDD Translations Updater
  *
- * @package   Fragen\EDD_SL_Translations_Updater
+ * @package   Fragen\EDD_Translations_Updater
  * @author    Andy Fragen
  * @license   MIT
- * @link      https://github.com/afragen/edd-sl-translations-updater
+ * @link      https://github.com/afragen/edd-translations-updater
  */
 
-namespace Fragen\EDD_SL_Translations_Updater;
+namespace Fragen\EDD_Translations_Updater;
 
 /*
  * Exit if called directly.
@@ -22,7 +22,7 @@ if ( ! defined( 'WPINC' ) ) {
  *
  * Update WordPress language packs from a git hosted repo.
  *
- * @package Fragen\EDD_SL_Translations_Updater
+ * @package Fragen\EDD_Translations_Updater
  * @author  Andy Fragen
  */
 trait Base {
@@ -69,7 +69,7 @@ trait Base {
 
 	/**
 	 * Get slug from $repo.
-	 * Sometimes there may be more than one repository used with EDD Software Licensing.
+	 * Sometimes there may be more than one repository used with EDD.
 	 *
 	 * @param array $repo EDD SL config data.
 	 *

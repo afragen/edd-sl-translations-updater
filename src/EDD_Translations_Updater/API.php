@@ -1,14 +1,14 @@
 <?php
 /**
- * EDD Software Licensing Translations Updater
+ * EDD Translations Updater
  *
- * @package   Fragen\EDD_SL_Translations_Updater
+ * @package   Fragen\EDD_Translations_Updater
  * @author    Andy Fragen
  * @license   MIT
- * @link      https://github.com/afragen/edd-sl-translations-updater
+ * @link      https://github.com/afragen/edd-translations-updater
  */
 
-namespace Fragen\EDD_SL_Translations_Updater;
+namespace Fragen\EDD_Translations_Updater;
 
 /*
  * Exit if called directly.
@@ -20,7 +20,7 @@ if ( ! defined( 'WPINC' ) ) {
 /**
  * Class API
  *
- * @package Fragen\EDD_SL_Translations_Updater
+ * @package Fragen\EDD_Translations_Updater
  */
 trait API {
 
@@ -131,9 +131,9 @@ trait API {
 	 */
 	protected function get_repo_cache( $repo = false ) {
 		if ( ! $repo ) {
-			$repo = isset( $this->type->slug ) ? $this->type->slug : 'eddsl-tu';
+			$repo = isset( $this->type->slug ) ? $this->type->slug : 'edd-tu';
 		}
-		$cache_key = 'eddsl-tu-' . md5( $repo );
+		$cache_key = 'edd-tu-' . md5( $repo );
 		$cache     = get_site_option( $cache_key );
 
 		if ( empty( $cache['timeout'] ) || current_time( 'timestamp' ) > $cache['timeout'] ) {
@@ -154,9 +154,9 @@ trait API {
 	 */
 	protected function set_repo_cache( $id, $response, $repo = false ) {
 		if ( ! $repo ) {
-			$repo = isset( $this->type->slug ) ? $this->type->slug : 'eddsl-tu';
+			$repo = isset( $this->type->slug ) ? $this->type->slug : 'edd-tu';
 		}
-		$cache_key = 'eddsl-tu-' . md5( $repo );
+		$cache_key = 'edd-tu-' . md5( $repo );
 		$timeout   = '+' . self::$hours . ' hours';
 
 		$this->response['timeout'] = strtotime( $timeout, current_time( 'timestamp' ) );
