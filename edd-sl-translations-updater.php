@@ -36,7 +36,7 @@ if ( version_compare( '5.4.0', PHP_VERSION, '>=' ) ) {
 	echo '<div class="error notice is-dismissible"><p>';
 	printf(
 		/* translators: 1: minimum PHP version required, 2: Upgrade PHP URL */
-		esc_html__( 'EDD Software Licensing Translations Updater cannot run on PHP versions older than %1$s. <a href="%2$s">Learn about upgrading your PHP.</a>', 'edd-sl-translations-updater' ),
+		wp_kses_post( __( 'EDD Software Licensing Translations Updater cannot run on PHP versions older than %1$s. <a href="%2$s">Learn about upgrading your PHP.</a>', 'edd-sl-translations-updater' ) ),
 		'5.4.0',
 		esc_url( __( 'https://wordpress.org/support/upgrade-php/' ) )
 	);
