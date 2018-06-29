@@ -1,5 +1,5 @@
 
-# EDD Software Licensing Translations Updater
+# EDD Translations Updater
 
 * Contributors: [Andy Fragen](https://github.com/afragen)
 * Tags: edd software licensing, language pack, updater
@@ -17,7 +17,7 @@ This plugin is an EDD Software Licensing extension that will allow for decoupled
 
 You will need to update to the latest versions of the updaters in the EDD Software Licensing sample code to ensure the appropriate action hooks are present.
 
-You will need to add a key/value pair to your setup array similar to the following,  
+You will need to add a key/value pair to your setup array similar to the following,
 `'languages' => 'https://github.com/<USER>/my-language-pack'`
 
 ### Plugins

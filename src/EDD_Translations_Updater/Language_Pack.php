@@ -1,14 +1,14 @@
 <?php
 /**
- * EDD Software Licensing Translations Updater
+ * EDD Translations Updater
  *
- * @package   Fragen\EDD_SL_Translations_Updater
+ * @package   Fragen\EDD_Translations_Updater
  * @author    Andy Fragen
  * @license   MIT
- * @link      https://github.com/afragen/edd-sl-translations-updater
+ * @link      https://github.com/afragen/edd-translations-updater
  */
 
-namespace Fragen\EDD_SL_Translations_Updater;
+namespace Fragen\EDD_Translations_Updater;
 
 /**
  * Exit if called directly.
@@ -20,7 +20,7 @@ if ( ! defined( 'WPINC' ) ) {
 /**
  * Class Language_Pack
  *
- * @package Fragen\EDD_SL_Translations_Updater
+ * @package Fragen\EDD_Translations_Updater
  */
 class Language_Pack {
 	use Base;
@@ -35,8 +35,8 @@ class Language_Pack {
 	/**
 	 * Language_Pack constructor.
 	 *
-	 * @param \stdClass                                             $repo EDD SL repo object.
-	 * @param \Fragen\EDD_SL_Translations_Updater\Language_Pack_API $api  Language_Pack_API object.
+	 * @param \stdClass                                          $repo EDD SL repo object.
+	 * @param \Fragen\EDD_Translations_Updater\Language_Pack_API $api  Language_Pack_API object.
 	 */
 	public function __construct( $repo, Language_Pack_API $api ) {
 		if ( null === $repo->languages ) {
@@ -83,9 +83,11 @@ class Language_Pack {
 			$translations = wp_get_installed_translations( 'themes' );
 		}
 
-		$repos = array_filter( $this->config, function( $e ) {
-			return isset( $e->language_packs );
-		} );
+		$repos = array_filter(
+			$this->config, function( $e ) {
+				return isset( $e->language_packs );
+			}
+		);
 
 		foreach ( $repos as $repo ) {
 			foreach ( $locales as $locale ) {

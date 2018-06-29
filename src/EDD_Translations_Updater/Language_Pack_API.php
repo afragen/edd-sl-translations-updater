@@ -1,19 +1,19 @@
 <?php
 /**
- * EDD Software Licensing Translations Updater
+ * EDD Translations Updater
  *
- * @package   Fragen\EDD_SL_Translations_Updater
+ * @package   Fragen\EDD_Translations_Updater
  * @author    Andy Fragen
  * @license   MIT
- * @link      https://github.com/afragen/edd-sl-translations-updater
+ * @link      https://github.com/afragen/edd-translations-updater
  */
 
-namespace Fragen\EDD_SL_Translations_Updater;
+namespace Fragen\EDD_Translations_Updater;
 
 /**
  * Class Language_Pack_API
  *
- * @package Fragen\EDD_SL_Translations_Updater
+ * @package Fragen\EDD_Translations_Updater
  */
 class Language_Pack_API {
 	use API;
@@ -84,7 +84,7 @@ class Language_Pack_API {
 				break;
 			case 'gitlab':
 				$id       = urlencode( $headers['owner'] . '/' . $headers['repo'] );
-				$response = $this->api( '/projects/' . $id . '/repository/files?file_path=language-pack.json' );
+				$response = $this->api( '/projects/' . $id . '/repository/files/language-pack.json' );
 				$response = isset( $response->content )
 					? json_decode( base64_decode( $response->content ) )
 					: null;

@@ -1,4 +1,4 @@
-# EDD Software Licensing Translations Updater
+# EDD Translations Updater
 
 Contributors: afragen
 Tags: edd-software-licensing, language pack, updater

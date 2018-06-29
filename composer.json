@@ -1,5 +1,5 @@
 {
-  "name": "afragen/edd-sl-translations-updater",
+  "name": "afragen/edd-translations-updater",
   "type": "wordpress-plugin",
   "keywords": [
     "edd-software-licensing",
@@ -14,7 +14,7 @@
   "repositories": [
     {
       "type": "vcs",
-      "url": "https://github.com/afragen/edd-sl-translations-updater"
+      "url": "https://github.com/afragen/edd-translations-updater"
     }
   ],
   "authors": [

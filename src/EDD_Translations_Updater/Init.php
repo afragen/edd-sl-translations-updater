@@ -1,14 +1,14 @@
 <?php
 /**
- * EDD Software Licensing Translations Updater
+ * EDD Translations Updater
  *
- * @package   Fragen\EDD_SL_Translations_Updater
+ * @package   Fragen\EDD_Translations_Updater
  * @author    Andy Fragen
  * @license   MIT
- * @link      https://github.com/afragen/edd-sl-translations-updater
+ * @link      https://github.com/afragen/edd-translations-updater
  */
 
-namespace Fragen\EDD_SL_Translations_Updater;
+namespace Fragen\EDD_Translations_Updater;
 
 /**
  * Exit if called directly.
@@ -20,7 +20,7 @@ if ( ! defined( 'WPINC' ) ) {
 /**
  * Class Init
  *
- * @package Fragen\EDD_SL_Translations_Updater
+ * @package Fragen\EDD_Translations_Updater
  */
 class Init {
 	use Base;
