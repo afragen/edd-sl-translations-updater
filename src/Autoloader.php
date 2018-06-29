@@ -2,11 +2,11 @@
 /**
  * Contains autoloading functionality.
  *
- * @package   Fragen\Autoloader
  * @author    Andy Fragen <andy@thefragens.com>
  * @license   GPL-2.0+
  * @link      http://github.com/afragen/autoloader
  * @copyright 2015 Andy Fragen
+ * @package   autoloader
  */
 
 namespace Fragen;
@@ -24,12 +24,11 @@ if ( ! class_exists( 'Fragen\\Autoloader' ) ) {
 	 *
 	 * To use with different plugins be sure to create a new namespace.
 	 *
-	 * @package   Fragen\Autoloader
 	 * @author    Andy Fragen <andy@thefragens.com>
 	 * @author    Barry Hughes <barry@codingkillsme.com>
 	 * @link      http://github.com/afragen/autoloader
 	 * @copyright 2015 Andy Fragen
-	 * @version   2.1.0
+	 * @version   2.2.0
 	 */
 	class Autoloader {
 		/**
@@ -47,14 +46,14 @@ if ( ! class_exists( 'Fragen\\Autoloader' ) ) {
 		 */
 		protected $map = array();
 
-
 		/**
 		 * Constructor.
 		 *
 		 * @access public
 		 *
 		 * @param array      $roots      Roots to scan when autoloading.
-		 * @param array|null $static_map List of classes that deviate from convention. Defaults to null.
+		 * @param array|null $static_map Array of classes that deviate from convention.
+		 *                               Defaults to null.
 		 */
 		public function __construct( array $roots, array $static_map = null ) {
 			$this->roots = $roots;
@@ -88,18 +87,19 @@ if ( ! class_exists( 'Fragen\\Autoloader' ) ) {
 					continue;
 				}
 
+				$psr4_fname = substr( $class, strlen( $namespace ) + 1 );
+				$psr4_fname = str_replace( '\\', DIRECTORY_SEPARATOR, $psr4_fname );
+
 				// Determine the possible path to the class, include all subdirectories.
-				$dirs = glob( $root_dir . '/*', GLOB_ONLYDIR );
-				array_unshift( $dirs, $root_dir );
+				$objects = new \RecursiveIteratorIterator( new \RecursiveDirectoryIterator( $root_dir ), \RecursiveIteratorIterator::SELF_FIRST );
+				foreach ( $objects as $name => $object ) {
+					if ( is_dir( $name ) ) {
+						$directories[] = rtrim( $name, './' );
+					}
+				}
+				$directories = array_unique( $directories );
 
-				$path = substr( $class, strlen( $namespace ) + 1 );
-				$path = str_replace( '\\', DIRECTORY_SEPARATOR, $path );
-
-				$paths = array_map(
-					function( $dir ) use ( $path ) {
-							return $dir . DIRECTORY_SEPARATOR . $path . '.php';
-					}, $dirs
-				);
+				$paths = $this->get_paths( $directories, array( $psr4_fname ) );
 
 				// Test for its existence and load if present.
 				foreach ( $paths as $path ) {
@@ -109,6 +109,26 @@ if ( ! class_exists( 'Fragen\\Autoloader' ) ) {
 					}
 				}
 			}
+		}
+
+		/**
+		 * Get and return an array of possible file paths.
+		 *
+		 * @param array $dirs       Array of plugin directories and subdirectories.
+		 * @param array $file_names Array of possible file names.
+		 *
+		 * @return mixed
+		 */
+		private function get_paths( $dirs, $file_names ) {
+			foreach ( $file_names as $file_name ) {
+				$paths[] = array_map(
+					function ( $dir ) use ( $file_name ) {
+						return $dir . DIRECTORY_SEPARATOR . $file_name . '.php';
+					}, $dirs
+				);
+			}
+
+			return call_user_func_array( 'array_merge', $paths );
 		}
 	}
 }
