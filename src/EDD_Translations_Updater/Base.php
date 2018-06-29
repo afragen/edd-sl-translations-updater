@@ -69,7 +69,7 @@ trait Base {
 
 	/**
 	 * Get slug from $repo.
-	 * Sometimes there may be more than one repository used with EDD.
+	 * Sometimes there may be more than one repository used with EDD Software Licensing.
 	 *
 	 * @param array $repo EDD SL config data.
 	 *

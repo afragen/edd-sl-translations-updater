@@ -12,7 +12,7 @@
  * Plugin Name:       EDD Translations Updater
  * Plugin URI:        https://github.com/afragen/edd-translations-updater
  * Description:       An EDD Software Licensing extension to automatically update language packs.
- * Version:           1.1.0.2
+ * Version:           1.2.0
  * Author:            Andy Fragen
  * License:           MIT
  * License URI:       http://www.opensource.org/licenses/MIT

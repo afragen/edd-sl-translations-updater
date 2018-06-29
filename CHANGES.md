@@ -1,4 +1,6 @@
 #### [unreleased]
+
+#### 1.2.0 / 2018-06-28
 * update `class Autoload`
 * update for GitLab API v4
 * renamed to **EDD Translations Updater**
