@@ -7,9 +7,9 @@
 * Requires PHP: 5.4
 * Tested up to: 4.9
 * Stable tag: master
-* Donate link: http://thefragens.com/translations-updater-donate
+* Donate link: <http://thefragens.com/translations-updater-donate>
 * License: MIT
-* License URI: http://www.opensource.org/licenses/MIT
+* License URI: <http://www.opensource.org/licenses/MIT>
 
 ## Description
 

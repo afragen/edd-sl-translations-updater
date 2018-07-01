@@ -58,4 +58,4 @@ $updater = new EDD_Theme_Updater_Admin(
 `
 
 The URI should point to a repository that contains the translations files. Refer to [GitHub Updater Translations](https://github.com/afragen/github-updater-translations) as an example.
-The URI should point to a repository that contains the translations files. It is created using the [GitHub Updater Language Pack Maker](https://github.com/afragen/language-pack-maker). The repo **must** be a public repo.
+The URI should point to a repository that contains the translations files. It is created using the [Language Pack Maker](https://github.com/afragen/language-pack-maker). The repo **must** be a public repo.
