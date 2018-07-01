@@ -1,5 +1,8 @@
 #### [unreleased]
 
+#### 1.2.1 / 2018-07-01
+* fixed some readme data
+
 #### 1.2.0 / 2018-06-28
 * update `class Autoload`
 * update for GitLab API v4
