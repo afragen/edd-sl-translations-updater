@@ -1,3 +1,5 @@
+## Deprecated
+Now a composer library, https://github.com/afragen/translations-updater
 
 # EDD Translations Updater
 
